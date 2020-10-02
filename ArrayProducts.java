@@ -6,8 +6,12 @@ class Main {
         System.out.println("Programm started: ");
         String[] products = new String[]{ " ", "Broad", "Apple", "Butter", "Pbutter" };
         int[] prices = new int[]{0, 30, 100, 200, 350 };
+        int sum = 0;
+        int quantity[] = new int[100];
+        for (int i = 0; i<100; i++) {
+            quantity[i] = 0;
+        }
         System.out.println("        продукт ------ номер ------ стоимость");
-        int quantity[] = new int[10];
         for (int i = 1; i < 5; i++) {
         System.out.printf("%14s %11s %18s\n", products[i], i, prices[i]);
         }
@@ -42,12 +46,12 @@ class Main {
             endTimeString = endTimeString.trim();
             int t = Integer.parseInt(endTimeString);
 
-            quantity[productNumber] = t;
+            quantity[productNumber] += t;
         }
         System.out.println("Вы купили");
         for (int i = 0; i< 5; i++) {
             if (quantity[i] != 0) {
-               int sum = prices[i]*quantity[i];
+               sum += prices[i]*quantity[i];
                totalSum += sum;
                System.out.println(products[i] + "--Количество: " + quantity[i] + " --сумма: " + sum);
             }
