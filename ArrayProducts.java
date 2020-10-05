@@ -7,7 +7,7 @@ class Main {
         String[] products = new String[]{ " ", "Broad", "Apple", "Butter", "Pbutter" };
         int[] prices = new int[]{0, 30, 100, 200, 350 };
         int sum = 0;
-        int quantity[] = new int[100];
+        int quantity[] = new int[products.length];
         for (int i = 0; i<100; i++) {
             quantity[i] = 0;
         }
@@ -53,6 +53,7 @@ class Main {
             if (quantity[i] != 0) {
                sum += prices[i]*quantity[i];
                totalSum += sum;
+                //counts[productIndex] += productCounts;
                System.out.println(products[i] + "--Количество: " + quantity[i] + " --сумма: " + sum);
             }
 
