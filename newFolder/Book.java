@@ -6,6 +6,7 @@ public class Book {
         this.title = title;
         this.status = status;
     }
+
     public String getStatus(){
         return status;
     }
