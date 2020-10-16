@@ -1,8 +1,8 @@
 public enum StatusEnum {
-    AVAILABLE("доступно"),
-    BORROWED("взято в пользование"),
-    ARCHIEVED("в архиве"),
-    OVERDUED("задержано")
+    AVAILABLE("available"),
+    BORROWED("borrowed"),
+    ARCHIEVED("archived"),
+    OVERDUED("overdued")
 
     private String description;
 private int property2;
