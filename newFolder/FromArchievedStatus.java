@@ -1,6 +1,6 @@
 public class FromArchievedStatusMover extends BookMover {
     public void moveToStatus(Book book, Status requestedStatus){
-        if (book.getStatus().equals("ARCHIEVED")) {
+        if (book.getStatus().equals("ARCHIEVED")) { //(book.getStatusEnum() == StatusEnum requestedStatus)
             switch (requestedStatus){
                 case BORROWED:
                     System.out.println("перевод в статус   " + requestedStatus + " невозможен");
